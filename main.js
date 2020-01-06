@@ -1587,10 +1587,11 @@ function getAllSensors() {
                                     type: 'state',
                                     common: {
                                         name: list[keyName]['name'] + ' ' + stateName,
-                                        type: 'number',
-                                        role: 'state',
                                         read: true,
-                                        write: true
+                                        write: true,
+                                        type: 'number',
+                                        role: 'value.temperature',
+                                        unit: '°C',
                                     },
                                     native: {}
                                 });
@@ -2004,9 +2005,10 @@ function getSensor(sensorId){
                                     common: {
                                         name: list['name'] + ' ' + stateName,
                                         type: 'number',
-                                        role: 'state',
                                         read: true,
-                                        write: true
+                                        write: true,
+                                        role: 'value.temperature',
+                                        unit: '°C'
                                     },
                                     native: {}
                                 });
